@@ -38,6 +38,14 @@ Gemini で少数ショット学習を使い定点カメラの画像を判定し�
 ./gemini.sh 2023/06/01 30 | tee res/202306.md
 ```
 
+実行結果のサンプル:
+
+| Date       | Image                                                                                                           | Answer             | Page                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------------------------------------------------------------- |
+| 2024-02-01 | ![](https://raw.githubusercontent.com/hankei6km/test-gemini-few-shot-lerning-mt-fuji/main/images/20240201.jpeg) | 富士山は見えない   | https://www.pref.shizuoka.jp/fujisanview/365.html?date=20240201gotenba |
+| 2024-02-02 | ![](https://raw.githubusercontent.com/hankei6km/test-gemini-few-shot-lerning-mt-fuji/main/images/20240202.jpeg) | 富士山は見えない   | https://www.pref.shizuoka.jp/fujisanview/365.html?date=20240202gotenba |
+| 2024-02-03 | ![](https://raw.githubusercontent.com/hankei6km/test-gemini-few-shot-lerning-mt-fuji/main/images/20240203.jpeg) | 富士山は見えます。 | https://www.pref.shizuoka.jp/fujisanview/365.html?date=20240203gotenba |
+
 `batch.sh` を実行すると月別に `gemini.sh` を実行し、結果を `res` ディレクトリに保存する。
 
 表の `Answer` に `null` がセットされた場合は、API 側の内部エラーなどが発生した場合です。
